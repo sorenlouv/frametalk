@@ -1,0 +1,33 @@
+{
+  "name": "frametalk",
+  "version": "0.1.0",
+  "description": "Simple postMessage wrapper to make cross-frame communication easy as pie. Supports promises and return values.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sqren/frametalk.git"
+  },
+  "keywords": [
+    "post-message",
+    "postMessage",
+    "promise",
+    "return",
+    "iframe",
+    "iframes",
+    "frame",
+    "cross-frame-communication"
+  ],
+  "author": "Søren Louv-Jansen <sorenlouv@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sqren/frametalk/issues"
+  },
+  "homepage": "https://github.com/sqren/frametalk#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "jest": "19.0.2"
+  }
+}

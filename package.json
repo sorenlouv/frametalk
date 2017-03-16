@@ -1,6 +1,6 @@
 {
   "name": "frametalk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple postMessage wrapper to make cross-frame communication easy as pie. Supports promises and return values.",
   "main": "index.js",
   "scripts": {

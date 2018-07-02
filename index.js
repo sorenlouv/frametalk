@@ -50,6 +50,10 @@ frametalk.replyOn = function(name, callback) {
 };
 
 frametalk._getSourceFrameWindow = function(eventSource) {
+	if (eventSource instanceof Window) {
+		return eventSource;
+	}
+
 	const sourceFrame = Array.from(document.getElementsByTagName('iframe')).filter(iframe => iframe.contentWindow === eventSource)[0];
 	if (!sourceFrame) {
 		console.error('Could not find iframe window');

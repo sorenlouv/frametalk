@@ -26,8 +26,8 @@
     "url": "https://github.com/sqren/frametalk/issues"
   },
   "homepage": "https://github.com/sqren/frametalk#readme",
-  "devDependencies": {},
-  "dependencies": {
+  "devDependencies": {
     "jest": "19.0.2"
-  }
+  },
+  "dependencies": {}
 }

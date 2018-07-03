@@ -1,4 +1,3 @@
-const crypto = require('crypto');
 const frametalk = {};
 const MESSAGE_IDENTIFIER = 'FRAME_TALK_MESSAGE';
 
@@ -22,7 +21,7 @@ frametalk.on = function(name, callback) {
 };
 
 frametalk.request = function(otherWindow, name, data, targetOrigin = '*') {
-	const id = getRandomId();
+	const id = getUniqueId();
 	const uniqueName = name + '_' + id;
 	const requestData = addRequestId(data, id);
 
@@ -73,8 +72,9 @@ function omitRequestId(dataWithRequestId) {
 	return dataWithoutRequestId;
 }
 
-function getRandomId() {
-	return crypto.randomBytes(32).toString('hex');
+let uniqueId = 0;
+function getUniqueId() {
+	return uniqueId++;
 }
 
 module.exports = frametalk;

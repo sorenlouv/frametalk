@@ -49,7 +49,7 @@ frametalk.replyOn = function(name, callback) {
 };
 
 frametalk._getSourceFrameWindow = function(eventSource) {
-	if (eventSource instanceof Window) {
+	if (frametalk._isWindow(eventSource)) {
 		return eventSource;
 	}
 
@@ -60,6 +60,14 @@ frametalk._getSourceFrameWindow = function(eventSource) {
 	}
 
 	return sourceFrame.contentWindow;
+};
+
+frametalk._isWindow = function(obj) {
+	if (typeof(window.constructor) === 'undefined') {
+		return obj instanceof window.constructor;
+	} else {
+		return obj.window === obj;
+	}
 };
 
 function addRequestId(data, requestId) {
